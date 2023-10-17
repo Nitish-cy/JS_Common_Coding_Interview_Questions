@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    .pichart {
+        border: 1px solid black;
+        width: 200px;
+        height: 200px;
+        border-radius: 50%;
+        background-image: conic-gradient(green var(--percentage), lightgreen 0);
+    }
+</style>
+
+<body>
+    <form>
+        <input type="range" id="inputhandler" value="10"></input>
+    </form>
+    <div class="pichart" style='--percentage:10% ;'>
+
+    </div>s
+    <script>
+        const pichart = document.querySelector(".pichart")
+        //confirm(pichart)
+        document.querySelector('#inputhandler').addEventListener('input', (e) => {
+            pichart.style = `--percentage:${e.target.value}%`
+        }
+        )
+    </script>
+</body>
+
+</html>
